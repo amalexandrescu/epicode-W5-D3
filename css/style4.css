@@ -7,7 +7,6 @@ body {
 #container {
   display: flex;
   flex-direction: column;
-  /* flex-grow: 9; */
   width: 100vw;
   height: 100vh;
   font-size: 20px;
@@ -58,7 +57,35 @@ nav {
   padding-left: 15px;
 }
 
-@media screen and (max-width: 575px) {
+#container-for-tablet-size {
+  display: flex;
+  flex-grow: 9;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #center-container {
+    flex-direction: column;
+  }
+
+  #container-for-tablet-size {
+    display: flex;
+    flex-grow: 8;
+  }
+
+  nav {
+    flex-grow: 1;
+  }
+
+  footer {
+    flex-grow: 2;
+  }
+
+  article {
+    flex-grow: 4;
+  }
+}
+
+@media screen and (max-width: 767px) {
   #center-container {
     flex-direction: column;
   }
@@ -70,4 +97,10 @@ nav {
   header {
     flex-grow: 2;
   }
-} ;
+
+  #container-for-tablet-size {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 8;
+  }
+}
